@@ -82,7 +82,10 @@ OPENAI_API_KEY=your-openai-api-key
 # Clone the repository
 
 # Install dependencies using yarn
-yarn or yarn install
+yarn or yarn install OR
+npm install OR
+pnpm install
+OR YOUR PREFERRED PACKAGE MANAGER
 
 # Start the development server with Turbopack
 yarn dev
@@ -96,6 +99,9 @@ yarn dev
 3. Install the Sanity CLI:
    ```bash
    npm install -g @sanity/cli
+   yarn add -g @sanity/cli
+   pnpm i -g @sanity/cli
+   OR YOUR PREFERRED PACKAGE MANAGER
    ```
 4. Initialize Sanity in your project:
    ```bash
@@ -123,7 +129,6 @@ yarn dev
 - Tailwind CSS
 - Radix UI
 - Lucide Icons
-
 
 ## License
 

@@ -20,11 +20,11 @@ import {
   SidebarMenuSubItem,
   SidebarRail,
 } from "@/components/ui/sidebar";
-import Link from "next/link";
 import Image from "next/image";
 import ReddishLogo from "@/images/Reddish Full.png";
-import CreateCommunityButton from "@/components/header/CreateCommunityButton";
+import Link from "next/link";
 import { getSubreddits } from "@/sanity/lib/subreddit/getSubreddits";
+import CreateCommunityButton from "./header/CreateCommunityButton";
 
 type SidebarData = {
   navMain: {
@@ -37,7 +37,6 @@ type SidebarData = {
     }[];
   }[];
 };
-
 
 export async function AppSidebar({
   ...props

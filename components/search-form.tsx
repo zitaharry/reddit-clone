@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/sidebar";
 import Form from "next/form";
 
-export function SearchForm() {
+export const SearchForm = () => {
   return (
     <Form action="/search">
       <SidebarGroup className="py-0">
