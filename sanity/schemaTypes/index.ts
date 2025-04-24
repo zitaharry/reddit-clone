@@ -1,10 +1,10 @@
 import { type SchemaTypeDefinition } from "sanity";
-// import { userType } from "./userType";
+import { userType } from "./userType";
 import { postType } from "./postType";
 import { commentType } from "./commentType";
-// import { voteType } from "./voteType";
+import { voteType } from "./voteType";
 import { subredditType } from "./subredditType";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [postType, commentType, subredditType],
+  types: [userType, postType, commentType, voteType, subredditType],
 };

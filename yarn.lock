@@ -5905,7 +5905,7 @@ groq-js@^1.16.1:
   dependencies:
     debug "^4.3.4"
 
-groq@3.86.1, groq@^3.84.0:
+groq@3.86.1, groq@^3.84.0, groq@^3.86.1:
   version "3.86.1"
   resolved "https://registry.yarnpkg.com/groq/-/groq-3.86.1.tgz#c7e275c49bcef8aed97f470764dfb1bf2b433859"
   integrity sha512-87KF+20HZuoQD/E8GQk/DMM+edobO++/KHz7/5U4CK4lQ7x6BVgyBWcpLZwPNcHSn8ZBHVO3mZu7+zNV1iX0VA==

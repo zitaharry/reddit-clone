@@ -48,7 +48,17 @@ export const userType = defineType({
     preview: {
         select: {
             title: "username",
-            media: "imageUrl"
-        }
-    }
+            media: "imageUrl",
+        },
+        prepare({ title, media }) {
+            return {
+                title,
+                media: media ? (
+                    <Image src={media} alt={`${title}'s avatar`} width={40} height={40} />
+                ) : (
+                    <UserIcon />
+                ),
+            };
+        },
+    },
 });

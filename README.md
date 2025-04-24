@@ -1,36 +1,134 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Reddit AI Clone - Next.js 15 & Sanity CMS
+
+A modern, AI-powered Reddit clone built with Next.js 15, Sanity CMS, Clerk, and AI content moderation. Features real-time content updates, community management, and AI-assisted content filtering.
+
+## Features
+
+### For Users
+
+- 🏠 Browse posts from all communities on the homepage
+- 🔍 Search for posts and communities
+- 📝 Create and manage posts with rich text formatting
+- 📊 Vote on posts and comments
+- 💬 Participate in community discussions through comments
+- 🖼️ Include images in posts for visual content
+- 👤 User profiles with post history
+
+### For Communities
+
+- 🌐 Create and customize subreddits / communities
+- 📋 Community-specific post feeds
+- 🚫 Report inappropriate content
+
+### AI Features
+
+- 🤖 AI-powered content moderation
+- 🛡️ Automatic detection and censoring of inappropriate content
+- 🚩 User reporting system for violations
+- 🔍 Smart content analysis for community standards enforcement
+
+### Technical Features
+
+- 🚀 Server Components & Server Actions with Next.js 15
+- 👤 Authentication with Clerk
+- 📝 Content management with Sanity.io
+- 🎨 Modern UI with Tailwind CSS and Radix UI
+- 📱 Responsive design
+- 🔄 Real-time content updates
+- 🔒 Protected routes and content
+- ⚡ Turbopack for fast development
+
+### UI/UX Features
+
+- 🎯 Clean, Reddit-inspired interface
+- 🎨 Consistent design system using Radix UI components
+- ♿ Accessible components
+- 📱 Responsive across all devices
+- ⏱️ Time-ago timestamps for posts and comments
+- 🔍 Intuitive search functionality
+- 💫 Micro-interactions for better engagement
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+
+- npm, yarn, or pnpm
+- Clerk Account
+- Sanity Account
+- OpenAI API key (for AI moderation)
+
+### Environment Variables
+
+Create a `.env.local` file with:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Sanity
+NEXT_PUBLIC_SANITY_PROJECT_ID=your-project-id
+NEXT_PUBLIC_SANITY_DATASET=production
+SANITY_API_TOKEN=your-sanity-read-token
+
+# Clerk
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your-clerk-publishable-key
+CLERK_SECRET_KEY=your-clerk-secret-key
+
+# OpenAI (for AI moderation)
+OPENAI_API_KEY=your-openai-api-key
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```terminal
+# Clone the repository
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Install dependencies using yarn
+yarn or yarn install
 
-## Learn More
+# Start the development server with Turbopack
+yarn dev
 
-To learn more about Next.js, take a look at the following resources:
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Setting up Sanity CMS
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Create a Sanity account
+2. Create a new project
+3. Install the Sanity CLI:
+   ```bash
+   npm install -g @sanity/cli
+   ```
+4. Initialize Sanity in your project:
+   ```bash
+   sanity init
+   ```
+5. Deploy Sanity Studio:
+   ```bash
+   sanity deploy
+   ```
 
-## Deploy on Vercel
+### Setting up Clerk
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Create a Clerk application
+2. Configure authentication providers
+3. Set up redirect URLs
+4. Add environment variables
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Core Technologies
+
+- Next.js 15
+- TypeScript
+- Sanity CMS
+- Clerk Auth
+- OpenAI API
+- Tailwind CSS
+- Radix UI
+- Lucide Icons
+
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+---
+
+Built with ❤️ using Next.js, Sanity, Clerk, and OpenAI
