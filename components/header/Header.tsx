@@ -7,6 +7,8 @@ import ReddishLogoOnly from "@/images/Reddish Logo Only.png";
 import { ChevronLeftIcon, MenuIcon } from "lucide-react";
 import Image from "next/image";
 import { useSidebar } from "../ui/sidebar";
+import Link from "next/link";
+import CreatePost from "../post/CreatePost";
 
 const Header = () => {
   const { toggleSidebar, open, isMobile } = useSidebar();
@@ -20,27 +22,29 @@ const Header = () => {
         ) : (
           <div className="flex items-center gap-2">
             <MenuIcon className="w-6 h-6" onClick={toggleSidebar} />
-            <Image
-              src={ReddishLogo}
-              alt="logo"
-              width={150}
-              height={150}
-              className="hidden md:block"
-            />
-            <Image
-              src={ReddishLogoOnly}
-              alt="logo"
-              width={40}
-              height={40}
-              className="block md:hidden"
-            />
+            <Link href="/">
+              <Image
+                src={ReddishLogo}
+                alt="logo"
+                width={150}
+                height={150}
+                className="hidden md:block"
+              />
+              <Image
+                src={ReddishLogoOnly}
+                alt="logo"
+                width={40}
+                height={40}
+                className="block md:hidden"
+              />
+            </Link>
           </div>
         )}
       </div>
 
       {/* Right Side */}
       <div className="flex items-center gap-2">
-        {/*<CreatePost />*/}
+        <CreatePost />
 
         <SignedIn>
           <UserButton />
